@@ -25,7 +25,7 @@
     <tr>
       <th scope="row">{{ $comuna->comu_codi }}</th>
       <td>Mar{{ $comuna->comu_nomb }}k</td>
-      <td>{{ $comuna->muni_codi}}</td>
+      <td>{{ $comuna->muni_nomb}}</td>
       <td>Actions</td>
     </tr>
        @endforeach
