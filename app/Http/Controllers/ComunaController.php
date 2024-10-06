@@ -13,7 +13,7 @@ class ComunaController extends Controller
      */
     public function index()
     {
-      //  $comunas = Comuna::all();
+  
       $comunas = DB::table('tb_comuna')
       ->join('tb_municipio', 'tb_comuna.muni_codi', '=', 'tb_municipio.muni_codi')
       ->select('tb_comuna.*', 'tb_municipio.muni_nomb')
@@ -40,8 +40,7 @@ class ComunaController extends Controller
     public function store(Request $request)
     {
         $comuna = new Comuna();
-// $comuna->comu_codi = $request->id;
-// El código de comuna es auto incremental
+
 
 $comuna->comu_nomb = $request->name;
 $comuna->muni_codi = $request->code;

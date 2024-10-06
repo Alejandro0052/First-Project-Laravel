@@ -19,7 +19,7 @@ Route::get('/comunas/{comuna}/edit', [ComunaController::class,'edit'])->name('co
 
 //Departamentos
 
-//ROUTES DEPARTMENTS
+
 Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');
 
 Route::post('/departamentos', [DepartamentoController::class, 'store'])->name('departamentos.store');
@@ -46,3 +46,16 @@ Route::delete('/municipios/{municipio}', [MunicipioController::class, 'destroy']
 Route::put('/municipios/{municipio}', [MunicipioController::class, 'update'])->name('municipios.update');
 
 Route::get('/municipios/{municipio}/edit', [MunicipioController::class, 'edit'])->name('municipios.edit');
+
+//Pais
+Route::get('paises', [PaisController::class, 'index'])->name('paises.index');
+
+Route::post('paises', [PaisController::class, 'store'])->name('paises.store');
+
+Route::get('/paises/create', [PaisController::class, 'create'])->name('paises.create');
+
+Route::delete('/paises/{pais}', [PaisController::class, 'destroy'])->name('paises.destroy');
+
+Route::put('/paises/{pais}', [PaisController::class, 'update'])->name('paises.update');
+
+Route::get('/paises/{pais}/edit', [PaisController::class, 'edit'])->name('paises.edit');
